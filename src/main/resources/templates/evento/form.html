@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
@@ -22,7 +21,7 @@
 				</div>
 				<div class="form-group mb-3">
 					<label for="nome">Capacidade:</label> <input class="form-control"
-						type="text" th:field="*{capacidade}" required></input>
+						type="number" th:field="*{capacidade}" required></input>
 					<div class="test-danger" th:if="${#fields.hasErrors('capacidade')}"
 						th:errors="*{capacidade}"></div>
 				</div>
@@ -33,8 +32,8 @@
 						th:errors="*{data}"></div>
 				</div>
 				<div class="form-group mb-3">
-					<label for="nome">Valor do Ingresso:</label> <input
-						class="form-control" type="text" th:field="*{precoIngresso}"
+					<label for="number">Valor do Ingresso:</label> <input
+						class="form-control" type="number" th:field="*{precoIngresso}"
 						required></input>
 					<div class="test-danger"
 						th:if="${#fields.hasErrors('precoIngresso')}"

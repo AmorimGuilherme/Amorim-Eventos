@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -16,7 +17,6 @@ import com.gft.gerenciador.entities.enums.GeneroMusical;
 
 @Entity
 public class Evento {
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,25 +25,27 @@ public class Evento {
 	@NotEmpty(message = "Nome do evento não pode estar vazio!")
 	private String nome;
 
-//@NotEmpty(message = "Capacidade não pode estar vazia!")
+	@Min(value = 0, message = "Capacidade não ser negativa!")
 	private Integer capacidade;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date data;
 
+	@Min(value = 0, message = "Preço do ingresso não pode ser negativo!")
 	@Digits(fraction = 2, integer = 10)
 	private double precoIngresso;
 
 	@ManyToOne
 	private CasaDeShow casaDeShow;
-	
+
 	private GeneroMusical generoMusical;
-	
+
 	public Evento() {
-		
+
 	}
-	
-	public Evento(String nome, Integer capacidade, Date data, double precoIngresso, CasaDeShow casaDeShow, GeneroMusical generoMusical) {
+
+	public Evento(String nome, Integer capacidade, Date data, double precoIngresso, CasaDeShow casaDeShow,
+			GeneroMusical generoMusical) {
 		this.nome = nome;
 		this.capacidade = capacidade;
 		this.data = data;
@@ -51,9 +53,6 @@ public class Evento {
 		this.casaDeShow = casaDeShow;
 		this.generoMusical = generoMusical;
 	}
-	
-	
-	
 
 	public Long getId() {
 		return id;
@@ -110,7 +109,5 @@ public class Evento {
 	public void setGeneroMusical(GeneroMusical generoMusical) {
 		this.generoMusical = generoMusical;
 	}
-	
-	
 
 }

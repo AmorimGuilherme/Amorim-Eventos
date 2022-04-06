@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
@@ -9,7 +8,7 @@
 		<div class="card-header">
 			<p class="text-primary">Nova Casa de Show</p>
 		</div>
-		<div class="alert alert-warning" th:if="${mensagemValida != null}"
+		<div class="alert alert-primary" th:if="${mensagemValida != null}"
 					th:text="${mensagemValida}"></div>
 		<div class="card-body">
 			<form method="POST" th:object="${casaDeShow}" th:action="@{/casa}">
@@ -29,8 +28,7 @@
 					<div class="alert alert-primary" th:if="${#lists.isEmpty(lista)}">
 					Nenhuma casa de show cadastrada!</div>
 				<div class="alert alert-success" th:if="${mensagem != null}"
-					th:text="${mensage}"></div>
-
+					th:text="${mensagem}"></div>
 					<div th:if="${not #lists.isEmpty(lista)}">
 		<table class="table table-striped table-dark">
 			<thead class="bg-dark text-white">

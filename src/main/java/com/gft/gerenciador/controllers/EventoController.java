@@ -22,7 +22,7 @@ import com.gft.gerenciador.services.EventoService;
 @Controller
 @RequestMapping("evento")
 public class EventoController {
-	
+
 	@Autowired
 	EventoService eventoService;
 
@@ -46,7 +46,7 @@ public class EventoController {
 				evento = new Evento();
 				mv.addObject("mensagem", e.getMessage());
 				mv.addObject("listarCasasDeShows", casaDeShowService.listarCasaDeShow());
-				mv.addObject("listarGenerosMusicais",GeneroMusical.obterGeneros());
+				mv.addObject("listarGenerosMusicais", GeneroMusical.values());
 
 			}
 
@@ -54,7 +54,7 @@ public class EventoController {
 		mv.addObject("evento", evento);
 		mv.addObject("lista", eventoService.listarEvento());
 		mv.addObject("listarCasasDeShows", casaDeShowService.listarCasaDeShow());
-		mv.addObject("listarGenerosMusicais",GeneroMusical.obterGeneros());
+		mv.addObject("listarGenerosMusicais", GeneroMusical.values());
 
 		return mv;
 
@@ -64,15 +64,15 @@ public class EventoController {
 	public ModelAndView salvarEvento(@Valid Evento evento, BindingResult bindingResult) {
 
 		ModelAndView mv = new ModelAndView("evento/form.html");
-		
+
 		List<CasaDeShow> casas = casaDeShowService.listarCasaDeShow();
-		mv.addObject("listarGenerosMusicais",GeneroMusical.obterGeneros());
-		
-		if(casas.isEmpty()) {
+		mv.addObject("listarGenerosMusicais", GeneroMusical.values());
+
+		if (casas.isEmpty()) {
 			mv.addObject("mensagemErro", "Impossivel cadastrar um Evento sem Casa de Show cadastrada!!");
 			return mv;
-			
-		} 
+
+		}
 
 		boolean novo = true;
 
@@ -92,7 +92,6 @@ public class EventoController {
 		} else {
 			mv.addObject("evento", eventoSalvo);
 		}
-		
 
 		mv.addObject("mensagem", "Evento salvo com sucesso!");
 		mv.addObject("lista", eventoService.listarEvento());
@@ -100,7 +99,7 @@ public class EventoController {
 
 		return mv;
 	}
-	
+
 	@RequestMapping("/excluir")
 	public ModelAndView excluirEvento(@RequestParam Long id, RedirectAttributes redirectAttributes) {
 

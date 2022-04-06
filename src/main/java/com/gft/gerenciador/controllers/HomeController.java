@@ -10,7 +10,7 @@ import com.gft.gerenciador.services.EventoService;
 @Controller
 @RequestMapping("home")
 public class HomeController {
-	
+
 	@Autowired
 	EventoService eventoService;
 
@@ -18,7 +18,7 @@ public class HomeController {
 	public ModelAndView listarEventos() {
 
 		ModelAndView mv = new ModelAndView("home/form.html");
-		
+
 		mv.addObject("lista", eventoService.listarEvento());
 
 		return mv;
