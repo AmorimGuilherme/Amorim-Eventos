@@ -86,7 +86,7 @@ public class CasaDeShowController {
 	}
 
 	@RequestMapping("/excluir")
-	public ModelAndView excluirCasaDeShow(@RequestParam Long id, RedirectAttributes redirectAttributes) {
+	public ModelAndView exclumeirCasaDeShow(@RequestParam Long id, RedirectAttributes redirectAttributes) {
 
 		ModelAndView mv = new ModelAndView("redirect:/casa");
 
