@@ -12,7 +12,7 @@ O projeto permite realizar o CRUD de Casa de Shows e Eventos, além de popular o
 
 ## Telas
 
-<div align="center"><img "width: 100%" src="src/main/java/images/gifteste.png"></div>
+<div align="center"><img "width: 100%" src="images/GifAtual.gif"></div>
 
 
 
