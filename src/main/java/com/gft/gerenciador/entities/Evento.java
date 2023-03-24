@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -16,6 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.gft.gerenciador.entities.enums.GeneroMusical;
 
 @Entity
+@Table(name = "tb_eventos")
 public class Evento {
 
 	@Id

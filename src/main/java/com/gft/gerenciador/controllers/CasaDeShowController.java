@@ -7,8 +7,9 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -28,7 +29,7 @@ public class CasaDeShowController {
 	@Autowired
 	private EventoService eventoService;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@GetMapping
 	public ModelAndView editarCasaDeShow(@RequestParam(required = false) Long id) {
 
 		ModelAndView mv = new ModelAndView("casa/form.html");
@@ -55,7 +56,7 @@ public class CasaDeShowController {
 
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@PostMapping
 	public ModelAndView salvarCasaDeShow(@Valid CasaDeShow casaDeShow, BindingResult bindingResult) {
 
 		ModelAndView mv = new ModelAndView("casa/form.html");
@@ -85,7 +86,7 @@ public class CasaDeShowController {
 		return mv;
 	}
 
-	@RequestMapping("/excluir")
+	@GetMapping("/excluir")
 	public ModelAndView exclumeirCasaDeShow(@RequestParam Long id, RedirectAttributes redirectAttributes) {
 
 		ModelAndView mv = new ModelAndView("redirect:/casa");

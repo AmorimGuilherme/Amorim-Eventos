@@ -7,8 +7,9 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -29,7 +30,7 @@ public class EventoController {
 	@Autowired
 	CasaDeShowService casaDeShowService;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@GetMapping
 	public ModelAndView editarEvento(@RequestParam(required = false) Long id) {
 
 		ModelAndView mv = new ModelAndView("evento/form.html");
@@ -60,7 +61,7 @@ public class EventoController {
 
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@PostMapping
 	public ModelAndView salvarEvento(@Valid Evento evento, BindingResult bindingResult) {
 
 		ModelAndView mv = new ModelAndView("evento/form.html");
@@ -100,7 +101,7 @@ public class EventoController {
 		return mv;
 	}
 
-	@RequestMapping("/excluir")
+	@GetMapping("/excluir")
 	public ModelAndView excluirEvento(@RequestParam Long id, RedirectAttributes redirectAttributes) {
 
 		ModelAndView mv = new ModelAndView("redirect:/evento");

@@ -2,6 +2,7 @@ package com.gft.gerenciador.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,7 +15,7 @@ public class HomeController {
 	@Autowired
 	EventoService eventoService;
 
-	@RequestMapping()
+	@GetMapping()
 	public ModelAndView listarEventos() {
 
 		ModelAndView mv = new ModelAndView("home/form.html");
