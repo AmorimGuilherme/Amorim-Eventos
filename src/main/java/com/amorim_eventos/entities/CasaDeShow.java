@@ -1,4 +1,4 @@
-package com.gft.gerenciador.entities;
+package com.amorim_eventos.entities;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.gft.gerenciador.controllers;
+package com.amorim_eventos.controllers;
 
 import java.util.List;
 
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.gft.gerenciador.entities.CasaDeShow;
-import com.gft.gerenciador.entities.Evento;
-import com.gft.gerenciador.entities.enums.GeneroMusical;
-import com.gft.gerenciador.services.CasaDeShowService;
-import com.gft.gerenciador.services.EventoService;
+import com.amorim_eventos.entities.CasaDeShow;
+import com.amorim_eventos.entities.Evento;
+import com.amorim_eventos.entities.enums.GeneroMusical;
+import com.amorim_eventos.services.CasaDeShowService;
+import com.amorim_eventos.services.EventoService;
 
 @Controller
 @RequestMapping("evento")

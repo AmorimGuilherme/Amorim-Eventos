@@ -1,4 +1,4 @@
-package com.gft.gerenciador.controllers;
+package com.amorim_eventos.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.gft.gerenciador.services.EventoService;
+import com.amorim_eventos.services.EventoService;
 
 @Controller
 @RequestMapping("home")

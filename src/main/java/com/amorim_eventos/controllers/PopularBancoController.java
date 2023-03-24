@@ -1,4 +1,4 @@
-package com.gft.gerenciador.controllers;
+package com.amorim_eventos.controllers;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.gft.gerenciador.entities.CasaDeShow;
-import com.gft.gerenciador.entities.Evento;
-import com.gft.gerenciador.entities.enums.GeneroMusical;
-import com.gft.gerenciador.services.CasaDeShowService;
-import com.gft.gerenciador.services.EventoService;
+import com.amorim_eventos.entities.CasaDeShow;
+import com.amorim_eventos.entities.Evento;
+import com.amorim_eventos.entities.enums.GeneroMusical;
+import com.amorim_eventos.services.CasaDeShowService;
+import com.amorim_eventos.services.EventoService;
 
 @Controller
 @RequestMapping("popular")

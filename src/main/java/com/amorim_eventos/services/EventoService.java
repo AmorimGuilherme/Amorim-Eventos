@@ -1,4 +1,4 @@
-package com.gft.gerenciador.services;
+package com.amorim_eventos.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gft.gerenciador.entities.Evento;
-import com.gft.gerenciador.repositories.EventoRepository;
+import com.amorim_eventos.entities.Evento;
+import com.amorim_eventos.repositories.EventoRepository;
 
 @Service
 public class EventoService {

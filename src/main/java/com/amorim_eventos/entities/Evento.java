@@ -1,4 +1,4 @@
-package com.gft.gerenciador.entities;
+package com.amorim_eventos.entities;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ import javax.validation.constraints.NotEmpty;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.gft.gerenciador.entities.enums.GeneroMusical;
+import com.amorim_eventos.entities.enums.GeneroMusical;
 
 @Entity
 @Table(name = "tb_eventos")

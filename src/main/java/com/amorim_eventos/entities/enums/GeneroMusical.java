@@ -1,4 +1,4 @@
-package com.gft.gerenciador.entities.enums;
+package com.amorim_eventos.entities.enums;
 
 public enum GeneroMusical {
 

@@ -1,9 +1,9 @@
-package com.gft.gerenciador.repositories;
+package com.amorim_eventos.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.gft.gerenciador.entities.Evento;
+import com.amorim_eventos.entities.Evento;
 
 @Repository
 public interface EventoRepository extends JpaRepository<Evento, Long>{
