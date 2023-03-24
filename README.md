@@ -8,7 +8,7 @@ O projeto permite realizar o CRUD de Casa de Shows e Eventos, além de popular o
 
 • Java Spring Boot  
 • SQL (MySQL)  
-• HTML e JS
+• HTML, JS e Thymeleaf
 
 ## Telas
 
